@@ -1,4 +1,17 @@
-let menubar = document.querySelector(".menu-bar")
+// Variables
+pyramids = [];
+// Selectors
+let menubar = document.querySelector(".menu-bar");
+pyramids[0] = document.querySelector(".green");
+pyramids[1] = document.querySelector(".blue");
+pyramids[2] = document.querySelector(".yellow");
+// Event Listener
+pyramids.forEach(pyramid => {
+  pyramid.addEventListener("click" , ()=>{
+    console.log(pyramid.style.backgroundImage)
+  })
+});
+// Fuctions
 setInterval(()=>{
     // console.log(window.pageYOffset);
     if(window.pageYOffset>0 ){
@@ -37,3 +50,4 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
+

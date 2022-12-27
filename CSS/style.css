@@ -1,138 +1,277 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.menu-bar{
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-    background-color: transparent;
-    transition: all 0.3s ease;
+
+.menu-bar {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  height: 80px;
 }
-.menu-bar ul{
-    display: inline-flex;
-    list-style: none;
-    color: #fff;
+
+.menu-bar ul {
+  display: inline-flex;
+  list-style: none;
+  color: #fff;
 }
-.menu-bar ul li{
-    width: 150px;
-    margin: 15px;
-    padding: 15px;
-    transition: all 0.5s ease;
-    
+
+.menu-bar ul li {
+  width: 200px;
+  margin: 10px;
+  padding: 15px;
+  transition: all 0.5s ease;
+
 }
-.menu-bar ul li:hover{
-    color: black;
-    background-color: white;
-    border-radius: 5px;
-    cursor: pointer;
+
+.menu-bar ul li:hover {
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
 }
-.menu-bar.show{
-    opacity: 1;
-    background-color: rgb(137, 88, 49);
+
+.menu-bar.show {
+  opacity: 1;
+  background-color: rgb(137, 88, 49);
 }
-.menu-bar ul a{
-    color: #fff;
-    text-decoration: none;
+
+.menu-bar ul a {
+  color: #fff;
+  text-decoration: none;
 }
+
 .container .card {
-    transition: all 0.3s ease;
-    transform: scale(1);
+  transition: all 0.3s ease;
+  transform: scale(1);
 }
 
 .container .card:hover {
-    transform: scale(0.99);
+  transform: scale(0.99);
 }
 
 .container .card.shadow:hover {
-    box-shadow: none !important;
-    cursor: pointer;
+  box-shadow: none !important;
+  cursor: pointer;
 }
-.background{
-    background: black;
+
+.container {
+  position: relative;
 }
-container {
-    position: relative;
-  }
-  
-  /* Hide the images by default */
-  .mySlides {
-    display: none;
-  }
-  
-  /* Add a pointer when hovering over the thumbnail images */
-  .cursor {
-    cursor: pointer;
-  }
-  
-  /* Next & previous buttons */
-  .prev,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 40%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
-  
-  /* Container for image text */
-  .caption-container {
-    text-align: center;
-    background-color: #222;
-    padding: 2px 16px;
-    color: white;
-  }
-  
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Six columns side by side */
-  .column {
-    float: left;
-    width: 16.66%;
-  }
-  
-  /* Add a transparency effect for thumnbail images */
-  .demo {
-    opacity: 0.6;
-  }
-  
-  .active,
-  .demo:hover {
-    opacity: 1;
-  }
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.card {
+  width: 50%;
+}
+
+p {
+  display: flex;
+  text-align: right;
+}
+
+#carouselExampleSlidesOnly img {
+  overflow: hidden;
+}
+
+.color {
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: .25;
+  z-index: 5;
+  width: 90%;
+  margin: auto;
+}
+
+.intro {
+  position: absolute;
+  height: 100%;
+  width: 40%;
+  background-color: #fff;
+  opacity: .6;
+  z-index: 4;
+  right: 0;
+  /* filter: grayscale(0.5) blur(0.2px); */
+}
+
+#carouselExampleSlidesOnly {
+  position: relative;
+}
+
+.intro h1 {
+  color: black;
+  margin-left: 30%;
+  margin-top: 20%;
+
+}
+
+h1,
+p,
+h3 {
+  text-align: center;
+}
+
+h1 {
+  margin-left: 3em;
+}
+
+p {
+  margin-left: 5em;
+}
+
+.red {
+  background-image: url(../images/1.jpg);
+  background-position: center;
+  background-size: cover;
+  grid-row: 1/4;
+  grid-column: 1/2;
+  border-radius: 5px;
+}
+
+.green {
+  background-image: url(../images/2.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.blue {
+  background-image: url(../images/3.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.yellow {
+  background-image: url(../images/4.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+.green:hover,
+.blue:hover,
+.yellow:hover {
+  filter: grayscale(0.5);
+  opacity: .8;
+}
+
+
+.c {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 4fr 1fr;
+  width: 90%;
+  height: 500px;
+  gap: 5px;
+  padding: 15px;
+  margin: auto;
+}
+.comment{
+  width: 50%;
+  height: 300px;
+  background-color: #eee;
+  margin: 2em;
+}
+.pyra{
+  width: 40%;
+   margin: 2em; 
+}
+input{
+  border: 2px solid #eee ;
+  outline: none;
+  width: 100%;
+  border-radius: 10px;
+  height: 50px;
+  display: flex-end;
+}
